@@ -1,0 +1,6 @@
+@mixin container {
+  @media (min-width: $desktop-width) {
+    max-width: $contant-desktop;
+    margin: 0 auto;
+  }
+}

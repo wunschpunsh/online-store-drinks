@@ -1,0 +1,45 @@
+.catalog {
+  background-color: #f8f8f8;
+}
+
+.catalog__container {
+  padding: 50px 20px 44px;
+}
+
+.catalog__subtitle {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $purple;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.catalog__filter-apply {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  padding: 10px 15px;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.catalog__filter-reset {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 36px;
+  padding: 10px 17px;
+  font-size: 14px;
+  line-height: 25px;
+}

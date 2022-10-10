@@ -1,0 +1,29 @@
+.advantages__container {
+  padding: 50px 20px 28px;
+}
+
+.advantages__subtitle {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $purple;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.advantages__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

@@ -1,0 +1,36 @@
+.footer-navigation__container {
+  padding: 20px;
+  border-bottom: 1px solid #f0ebff;
+}
+
+.footer-navigation__subtitle {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $purple;
+}
+
+.footer-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-navigation__item {
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
+.footer-navigation__link {
+  display: block;
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $base-black;
+}

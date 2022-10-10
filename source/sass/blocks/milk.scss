@@ -1,0 +1,60 @@
+.milk__title {
+  margin: 0;
+  margin-bottom: 22px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.milk__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.milk__item {
+  margin-bottom: 23px;
+}
+
+.milk__field {
+  display: flex;
+  align-items: center;
+}
+
+.milk__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.milk__marker {
+  box-sizing: border-box;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $base-white;
+  border: 2px solid #bdbdbd;
+}
+
+.milk__input:checked + .milk__marker::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $purple;
+}
+
+.milk__input:disabled {
+  & ~ .milk__marker {
+    border: 2px solid #e2e2e2;
+  }
+
+  & ~ .milk__description {
+    color: #bdbdbd;
+  }
+}

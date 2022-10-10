@@ -1,0 +1,21 @@
+.social__container {
+  display: flex;
+}
+
+.social__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__item {
+  padding: 10px;
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.social__link-icon {
+  display: block;
+}

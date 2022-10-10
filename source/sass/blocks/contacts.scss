@@ -1,0 +1,48 @@
+.contacts__container {
+  padding: 20px;
+  border-bottom: 1px solid #f0ebff;
+}
+
+.contacts__subtitle {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $purple;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.contacts__link {
+  position: relative;
+  display: block;
+  padding-left: 19px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: $base-black;
+
+  &--adres {
+    background-image: url("../../img/point.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  &--phone {
+    background-image: url("../../img/phone.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}

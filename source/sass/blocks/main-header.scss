@@ -1,0 +1,151 @@
+.main-header__container {
+  @include container;
+}
+
+.main-header__nav {
+  position: relative;
+  display: flex;
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
+  }
+}
+
+.main-header__logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 25%;
+    margin-right: 162px;
+  }
+}
+
+.main-header__logo {
+  @media (max-width: $mobile-width-only) {
+    &--visible-tablet {
+      display: none;
+    }
+
+    &--visible-desktop {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--visible-mobile {
+      display: none;
+    }
+
+    &--visible-tablet {
+      display: block;
+    }
+
+    &--visible-desktop {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+
+    &--visible-mobile {
+      display: none;
+    }
+
+    &--visible-tablet {
+      display: none;
+    }
+
+    &--visible-desktop {
+      display: block;
+    }
+  }
+}
+
+.main-header__logo-text {
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-black;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+  }
+}
+
+.main-header__icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.main-header__icon-link {
+  padding: 20px 22px;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.main-header__button {
+  position: relative;
+  padding: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 6px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 1.5px;
+    background-color: $base-black;
+    box-shadow: 0 5px 0 0 $base-black, 0 10px 0 0 $base-black;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__icon {
+  @media (min-width: $desktop-width) {
+    margin-right: 8px;
+  }
+}
+
+.main-header__icon-text {
+  display: none;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  color: $base-black;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+  }
+}
