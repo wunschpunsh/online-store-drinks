@@ -33,6 +33,12 @@
   color: $purple;
   background-color: $base-white;
 
+  &--active {
+    font-weight: 600;
+    background-color: transparent;
+    color: $base-black;
+  }
+
   &--prev {
     background-image: url("../../img/arrow-pagination-left.svg");
     background-repeat: no-repeat;
