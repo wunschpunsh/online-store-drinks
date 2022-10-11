@@ -1,5 +1,10 @@
 .origin__container {
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 27.1%;
+    margin-bottom: 40px;
+  }
 }
 
 .origin__title {

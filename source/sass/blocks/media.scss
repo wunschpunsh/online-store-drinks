@@ -1,6 +1,11 @@
 .media__container {
   padding: 20px;
   border-bottom: 1px solid #f0ebff;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .media__subtitle {

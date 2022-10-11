@@ -4,6 +4,16 @@
 
 .catalog__container {
   padding: 50px 20px 44px;
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 20px 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0 120px;
+  }
+
+  @include container;
 }
 
 .catalog__subtitle {
@@ -24,6 +34,45 @@
   font-size: 24px;
   line-height: 36px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.catalog__contant-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.catalog__filter {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    flex-basis: 41%;
+    margin-right: 29px;
+  }
+}
+
+.catalog__filter-container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 52px;
+  }
 }
 
 .catalog__filter-apply {
@@ -33,6 +82,14 @@
   padding: 10px 15px;
   font-size: 13px;
   line-height: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 3px;
+    margin: 0;
+    margin-right: 30px;
+    line-height: 24px;
+    font-size: 14px;
+  }
 }
 
 .catalog__filter-reset {
@@ -42,4 +99,10 @@
   padding: 10px 17px;
   font-size: 14px;
   line-height: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 6px;
+    margin: 0;
+    line-height: 24px;
+  }
 }

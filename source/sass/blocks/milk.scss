@@ -1,3 +1,10 @@
+.milk__container {
+  @media (min-width: $tablet-width) {
+    flex-basis: 29%;
+    // margin-right: 38px;
+  }
+}
+
 .milk__title {
   margin: 0;
   margin-bottom: 22px;

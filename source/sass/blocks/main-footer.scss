@@ -1,11 +1,85 @@
+.main-footer__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 0;
+  }
+  @include container;
+}
+
 .main-footer__images {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid #f0ebff;
+
+  @media (min-width: $tablet-width) {
+    padding: 42px 20px 32px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    flex-basis: 25%;
+    padding: 0;
+  }
+}
+
+.main-footer__images-link {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column-reverse;
+    text-decoration: none;
+  }
 }
 
 .main-footer__images-logo {
   display: block;
+
+  &--visible-tablet {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--visible-phone {
+      display: none;
+    }
+    &--visible-tablet {
+      display: block;
+    }
+  }
+}
+
+.main-footer__images-logo-text {
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-black;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+}
+
+.main-footer__navigation {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 75%;
+    padding: 0;
+    margin: 0;
+  }
 }

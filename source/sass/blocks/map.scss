@@ -1,0 +1,17 @@
+.map__container {
+  max-width: 100%;
+  min-height: 420px;
+  background-image: url("../../img/contant/maps/map-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    min-height: 480px;
+    background-image: url("../../img/contant/maps/map-medium.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 540px;
+    background-image: url("../../img/contant/maps/map-large.png");
+  }
+}

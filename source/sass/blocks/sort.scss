@@ -2,6 +2,9 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
 }
 
 .sort__control-container {
@@ -9,6 +12,11 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    margin-bottom: 26px;
+  }
 }
 
 .sort__control {
