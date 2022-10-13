@@ -5,13 +5,25 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/contant/maps/map-small@2x.png");
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 480px;
     background-image: url("../../img/contant/maps/map-medium.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/contant/maps/map-medium@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 540px;
     background-image: url("../../img/contant/maps/map-large.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/contant/maps/map-large@2x.png");
+    }
   }
 }

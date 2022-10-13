@@ -94,6 +94,32 @@
   padding: 20px 22px;
   text-decoration: none;
 
+  &:focus-visible {
+    outline: none;
+  }
+
+  @media (min-width: $desktop-width), (max-width: $mobile-width-only) {
+    &:focus,
+    &:hover .main-header__icon-text {
+      color: $purple;
+    }
+
+    &:focus,
+    &:hover .main-header__icon {
+      fill: $purple;
+    }
+
+    &:active {
+      background-color: #f0ebff;
+      .main-header__icon {
+        fill: $purple;
+      }
+      .main-header__icon-text {
+        color: $purple;
+      }
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding: 30px 22px;
   }
@@ -125,12 +151,22 @@
     box-shadow: 0 5px 0 0 $base-black, 0 10px 0 0 $base-black;
   }
 
+  &:active {
+    background-color: #f0ebff;
+  }
+
+  .main-nav--opened &:active {
+    background-color: transparent;
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
 .main-header__icon {
+  fill: #333333;
+
   @media (min-width: $desktop-width) {
     margin-right: 8px;
   }

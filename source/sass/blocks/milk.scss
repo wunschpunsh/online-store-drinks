@@ -45,6 +45,25 @@
   border: 2px solid #bdbdbd;
 }
 
+.milk__input:hover:enabled:not(:checked) ~ .milk__marker::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.milk__input:hover:enabled:not(:checked) ~ .milk__marker {
+  border: 2px solid #9070ec;
+}
+
+.milk__input:checked + .milk__marker {
+  border: 2px solid #9070ec;
+}
+
 .milk__input:checked + .milk__marker::after {
   content: "";
   position: absolute;
@@ -60,8 +79,18 @@
   & ~ .milk__marker {
     border: 2px solid #e2e2e2;
   }
-
   & ~ .milk__description {
     color: #bdbdbd;
   }
+}
+
+.milk__input:checked[disabled] ~ .milk__marker::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #e2e2e2;
 }

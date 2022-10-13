@@ -38,4 +38,17 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $base-black;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: #9070ec;
+  }
+
+  &:active {
+    color: #593cac;
+  }
 }

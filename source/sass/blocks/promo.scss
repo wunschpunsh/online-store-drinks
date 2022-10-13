@@ -148,19 +148,6 @@
 
 .promo__button {
   padding: 8px 20px;
-
-  &:active {
-    background-color: #593cac;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: #9070ec;
-  }
-
-  &:disabled {
-    background-color: $base-grey;
-  }
 }
 
 .promo__slider-button {
@@ -209,6 +196,11 @@
         ),
         url("../../img/slider-buton-prev.svg") no-repeat center;
     }
+
+    &:disabled {
+      background: url("../../img/slider-button-prev-disabled.svg") no-repeat
+        center;
+    }
   }
   &--next {
     right: 0;
@@ -235,6 +227,11 @@
           rgba(120, 89, 207, 0) 100%
         ),
         url("../../img/slider-button-next.svg") no-repeat center;
+    }
+
+    &:disabled {
+      background: url("../../img/slider-button-next-disabled.svg") no-repeat
+        center;
     }
   }
 }

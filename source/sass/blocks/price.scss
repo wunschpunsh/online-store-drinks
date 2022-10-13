@@ -34,12 +34,13 @@
   position: relative;
   top: 0;
   left: 0;
-  width: 94%;
+  width: 90%;
   height: 2px;
   background-color: #9070ec;
 }
 
 .price__range-button {
+  position: relative;
   z-index: 10;
   position: absolute;
   top: calc(50% - 12px);
@@ -50,13 +51,44 @@
   cursor: pointer;
   border: 2px solid $purple;
   background-color: $base-white;
+  &:hover:enabled.price__range-button--min::after,
+  &:hover:enabled.price__range-button--max::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #7859cf40;
+  }
+
+  &:active:enabled.price__range-button--min::after,
+  &:active:enabled.price__range-button--max::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #7859cf;
+  }
+
+  &:disabled {
+    border: 2px solid #bdbdbd;
+  }
+
+  &:disabled ~ .price__range-bar {
+    background-color: #bdbdbd;
+  }
 
   &--min {
     left: 0;
   }
 
   &--max {
-    right: 0;
+    right: calc(10% - 12px); // 10%  это (100% - width price__range-bar)
   }
 }
 
@@ -73,7 +105,7 @@
 .price__input {
   width: 34%;
   padding: 7px 9px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -81,10 +113,22 @@
   text-align: center;
   border: 2px solid #9070ec;
   border-radius: 4px;
-  color: #bdbdbd;
+  color: $base-black;
 
-  &--to {
-    color: $base-black;
+  &::placeholder {
+    color: #bdbdbd;
+  }
+
+  &:focus {
+    border: 2px solid #593cac;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    border: 2px solid #e2e2e2;
   }
 
   @media (min-width: $tablet-width) {

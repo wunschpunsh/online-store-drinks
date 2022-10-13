@@ -42,4 +42,17 @@
   &:not(:last-child) {
     margin-bottom: 4px;
   }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: #9070ec;
+  }
+
+  &:active {
+    color: #593cac;
+  }
 }

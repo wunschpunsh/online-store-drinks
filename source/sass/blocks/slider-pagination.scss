@@ -23,4 +23,9 @@
   &--active {
     background-color: $purple;
   }
+
+  &:hover,
+  &:focus {
+    background-color: #7859cf40;
+  }
 }

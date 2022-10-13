@@ -1,3 +1,17 @@
+.sort__control {
+  position: relative;
+
+  &--open .sort__control-list {
+    display: block;
+  }
+
+  &--open .sort__control-current {
+    background-image: url('../../img/arrow-select-active.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+}
+
 .sort__subtitle {
   font-weight: 600;
   font-size: 16px;
@@ -7,7 +21,7 @@
   }
 }
 
-.sort__control-container {
+.sort__control-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,20 +32,66 @@
     margin-bottom: 26px;
   }
 }
-
-.sort__control {
+.sort__control-list {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  top: 42px;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: $base-white;
+}
+.sort__control-current {
+  box-sizing: border-box;
   width: 165px;
+  height: 32px;
   padding: 4px 30px 4px 10px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  background-image: url("../../img/arrow-select.svg");
+  background-image: url('../../img/arrow-select.svg');
   background-repeat: no-repeat;
   background-position: right 10px center;
   appearance: none;
   border: none;
   color: $purple;
   background-color: transparent;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #f0ebff;
+    border-radius: 4px;
+  }
+}
+
+.sort__control-item {
+  width: 190px;
+  padding: 8px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #f0ebff;
+  }
+
+  &:hover {
+    background-color: #f0ebff;
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &:active {
+    background-color: $purple;
+    color: $base-white;
+    border-radius: 4px 4px 0px 0px;
+  }
 }

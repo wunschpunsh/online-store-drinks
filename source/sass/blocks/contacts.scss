@@ -50,4 +50,17 @@
     background-repeat: no-repeat;
     background-size: auto;
   }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: #9070ec;
+  }
+
+  &:active {
+    color: #593cac;
+  }
 }

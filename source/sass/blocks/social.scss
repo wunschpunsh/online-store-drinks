@@ -11,11 +11,34 @@
 }
 
 .social__item {
-  padding: 10px;
   &:not(:last-child) {
     margin-right: 20px;
   }
 }
+
+.social__link {
+  display: block;
+  padding: 10px;
+
+  &:hover,
+  &:focus {
+    border-radius: 4px;
+    background-color: #f0ebff;
+
+    & .social__link-icon {
+      fill: $purple;
+    }
+  }
+  &:active {
+    background-color: #7859cf40;
+    border-radius: 4px;
+
+    & .social__link-icon {
+      fill: $purple;
+    }
+  }
+}
 .social__link-icon {
   display: block;
+  fill: #bdbdbd;
 }

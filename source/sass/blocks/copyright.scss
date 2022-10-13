@@ -1,4 +1,6 @@
 .copyright {
+  display: flex;
+  justify-content: center;
   padding: 20px 57px 30px;
 
   @media (min-width: $tablet-width) {
@@ -12,11 +14,35 @@
   }
 }
 
+.copyright__text {
+  margin-right: 3px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #bdbdbd;
+}
+
 .copyright__link {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+
+  &:hover .copyright__name,
+  &:focus .copyright__name {
+    color: $purple;
+  }
+  &:hover .copyright__name-icon,
+  &:focus .copyright__name-icon {
+    fill: $purple;
+  }
+
+  &:active .copyright__name {
+    color: #593cac;
+  }
+
+  &:active .copyright__name-icon {
+    fill: #593cac;
+  }
 }
 
 .copyright__name {
@@ -25,4 +51,8 @@
   line-height: 16px;
   color: #bdbdbd;
   margin-right: 4px;
+}
+
+.copyright__name-icon {
+  fill: #bdbdbd;
 }

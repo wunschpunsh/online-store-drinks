@@ -38,7 +38,7 @@
   width: 42px;
   height: 24px;
   margin-right: 10px;
-  background: #bdbdbd;
+  background-color: #bdbdbd;
   border-radius: 12px;
 
   &::before {
@@ -49,9 +49,24 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    transition: 0.3s;
     background-color: $base-white;
   }
+}
+
+.origin__input:hover:enabled:not(:checked) ~ .origin__marker {
+  background-color: #7859cf40;
+  border: 2px solid #9070ec;
+  border-radius: 12px;
+}
+.origin__input:hover:enabled:not(:checked) ~ .origin__marker::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $base-white;
 }
 
 .origin__input:checked + .origin__marker::before {
@@ -68,6 +83,16 @@
 
 .origin__input:disabled ~ .origin__description {
   color: #e2e2e2;
+}
+
+.origin__input:checked[disabled] ~ .origin__marker::before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #bdbdbd;
 }
 
 .origin__description {
