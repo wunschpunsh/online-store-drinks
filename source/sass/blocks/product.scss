@@ -1,5 +1,7 @@
 .product__item {
   padding: 40px 20px 20px;
+  border-radius: 4px;
+  background-color: $base-white;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -11,7 +13,13 @@
 
   @media (min-width: $tablet-width) {
     padding: 50px 30px 30px;
-    background-color: $base-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover,
+    &:focus {
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    }
   }
 }
 
@@ -30,6 +38,11 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.product__link {
+  text-decoration: none;
+  color: $base-black;
 }
 
 .product__image {
@@ -88,13 +101,13 @@
   line-height: 20px;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 10px;
     left: 20px;
     width: 20px;
     height: 16px;
-    background-image: url("../../img/product-button.svg");
+    background-image: url('../../img/product-button.svg');
     background-repeat: no-repeat;
   }
 }

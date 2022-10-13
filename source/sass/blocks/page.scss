@@ -3,11 +3,11 @@
 }
 
 .page__body {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   min-width: $contant-mobile;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: 'Montserrat', 'Arial', sans-serif;
   font-style: normal;
   font-size: 16px;
   font-weight: 400;

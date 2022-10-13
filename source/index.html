@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./leaflet/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
     <title>Интернет-магазин кофейных напитков Drink2Go</title>
   </head>
   <body class="page__body">
@@ -146,76 +157,171 @@
       </h1>
       <section class="promo">
         <h2 class="visually-hidden">Важная информация</h2>
-        <div class="promo__container">
-          <div class="promo__image-container">
-            <picture>
-              <source
-                media="(min-width: 1440px)"
-                srcset="
-                  ./img/contant/promo-product-large.png,
-                  ./img/contant/promo-product-large@2x.png 2x
-                "
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="
-                  ./img/contant/promo-product-medium.png,
-                  ./img/contant/promo-product-medium@2x.png 2x
-                "
-              />
-              <img
-                src="./img/contant/promo-product-small.png"
-                srcset="./img/contant/promo-product-small@2x.png 2x"
-                alt="попробуйте нашу новинку"
-                class="promo__image"
-                width="280"
-                height="280"
-              />
-            </picture>
-          </div>
-          <button class="promo__slider-button promo__slider-button--prev">
-            <span class="visually-hidden">Предыдущий блок</span>
-          </button>
-          <button class="promo__slider-button promo__slider-button--next">
-            <span class="visually-hidden">Следующий блок</span>
-          </button>
-          <div class="promo__description-container">
-            <span class="promo__subtitle">Новинка!</span>
-            <h3 class="promo__title">Декаф Флэт Уайт</h3>
-            <p class="promo__description">
-              Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным
-              фермерским молоком — то, что нужно для расслабления после тяжёлого
-              рабочего дня
-            </p>
-            <div class="promo__price-container">
-              <span class="promo__price-before">295₽</span>
-              <span class="promo__price-after">225₽</span>
-              <button class="promo__button button button-primary" type="button">
-                Заказать
-              </button>
+        <div class="promo__swiper swiper">
+          <div class="promo__swiper-container swiper-wrapper">
+            <div class="promo__swiper-slide swiper-slide slide">
+              <div class="slide__container">
+                <div class="slide__image-container">
+                  <picture>
+                    <source
+                      media="(min-width: 1440px)"
+                      srcset="
+                        ./img/contant/promo-products/promo-product-white-large.png,
+                        ./img/contant/promo-products/promo-product-white-large@2x.png 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/contant/promo-products/promo-product-white-medium.png,
+                        ./img/contant/promo-products/promo-product-white-medium@2x.png 2x
+                      "
+                    />
+                    <img
+                      src="./img/contant/promo-products/promo-product-white-small.png"
+                      srcset="
+                        ./img/contant/promo-products/promo-product-white-small@2x.png 2x
+                      "
+                      alt="попробуйте нашу новинку"
+                      class="slide__image"
+                      width="280"
+                      height="280"
+                    />
+                  </picture>
+                </div>
+                <div class="slide__description-container">
+                  <span class="slide__subtitle">Новинка!</span>
+                  <h3 class="slide__title">Декаф Флэт Уайт</h3>
+                  <p class="slide__description">
+                    Свежесваренный кофе без кофеина из Эфиопии
+                    с&nbsp;натуральным фермерским молоком — то, что нужно для
+                    расслабления после тяжёлого рабочего дня
+                  </p>
+                  <div class="slide__price-container">
+                    <span class="slide__price-before">295₽</span>
+                    <span class="slide__price-after">225₽</span>
+                    <button
+                      class="slide__button-buy button button-primary"
+                      type="button"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="promo__swiper-slide swiper-slide slide">
+              <div class="slide__container">
+                <div class="slide__image-container">
+                  <picture>
+                    <source
+                      media="(min-width: 1440px)"
+                      srcset="
+                        ./img/contant/promo-products/promo-product-purple-large.png,
+                        ./img/contant/promo-products/promo-product-purple-large@2x.png 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/contant/promo-products/promo-product-purple-medium.png,
+                        ./img/contant/promo-products/promo-product-purple-medium@2x.png 2x
+                      "
+                    />
+                    <img
+                      src="./img/contant/promo-products/promo-product-purple-small.png"
+                      srcset="
+                        ./img/contant/promo-products/promo-product-purple-small@2x.png 2x
+                      "
+                      alt="попробуйте нашу новинку"
+                      class="slide__image"
+                      width="280"
+                      height="280"
+                    />
+                  </picture>
+                </div>
+                <div class="slide__description-container">
+                  <span class="slide__subtitle">Новинка!</span>
+                  <h3 class="slide__title">Лавандовый Латте</h3>
+                  <p class="slide__description">
+                    Невероятное сочетание перуанской высокогорной арабики с
+                    молоком ламы и лавандовым сиропом унесёт вас прямо на
+                    вершину Радужных гор
+                  </p>
+                  <div class="slide__price-container">
+                    <span class="slide__price-before">285₽</span>
+                    <span class="slide__price-after">265₽</span>
+                    <button
+                      class="slide__button-buy button button-primary"
+                      type="button"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="promo__swiper-slide swiper-slide slide">
+              <div class="slide__container">
+                <div class="slide__image-container">
+                  <picture>
+                    <source
+                      media="(min-width: 1440px)"
+                      srcset="
+                        ./img/contant/promo-products/promo-product-black-large.png,
+                        ./img/contant/promo-products/promo-product-black-large@2x.png 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/contant/promo-products/promo-product-black-medium.png,
+                        ./img/contant/promo-products/promo-product-black-medium@2x.png 2x
+                      "
+                    />
+                    <img
+                      src="./img/contant/promo-products/promo-product-black-small.png"
+                      srcset="
+                        ./img/contant/promo-products/promo-product-black-small@2x.png 2x
+                      "
+                      alt="попробуйте нашу новинку"
+                      class="slide__image"
+                      width="280"
+                      height="280"
+                    />
+                  </picture>
+                </div>
+                <div class="slide__description-container">
+                  <span class="slide__subtitle">Новинка!</span>
+                  <h3 class="slide__title">Тройной Эспрессо</h3>
+                  <p class="slide__description">
+                    Мощнее укола адреналина, чернее самой тёмной ночи, этот
+                    тройной эспрессо из Колумбии покажет вам, что такое
+                    настоящая бодрость
+                  </p>
+                  <div class="slide__price-container">
+                    <span class="slide__price-before">395₽</span>
+                    <span class="slide__price-after">375₽</span>
+                    <button
+                      class="slide__button-buy button button-primary"
+                      type="button"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="promo__silder-pagination slider-pagination">
-          <ol class="slider-pagination__list">
-            <li class="slider-pagination__item">
-              <button
-                class="slider-pagination__button slider-pagination__button--active"
-              >
-                <span class="visually-hidden">1 слайд</span>
-              </button>
-            </li>
-            <li class="slider-pagination__item">
-              <button class="slider-pagination__button">
-                <span class="visually-hidden">2 слайд</span>
-              </button>
-            </li>
-            <li class="slider-pagination__item">
-              <button class="slider-pagination__button">
-                <span class="visually-hidden">3 слайд</span>
-              </button>
-            </li>
-          </ol>
+          <button class="slide__button slide__button--prev">
+            <span class="visually-hidden">Предыдущий блок</span>
+          </button>
+          <button class="slide__button slide__button--next">
+            <span class="visually-hidden">Следующий блок</span>
+          </button>
+          <div class="promo__silder-pagination slider-pagination">
+            <div class="slider-pagination__list"></div>
+          </div>
         </div>
       </section>
       <section class="advantages">
@@ -360,6 +466,7 @@
                   <input
                     class="price__input price__input--from"
                     type="number"
+                    min="0"
                     placeholder="0"
                     name="min-price"
                   />
@@ -520,15 +627,17 @@
               <div class="sort__products product pagination">
                 <ul class="product__list">
                   <li class="product__item">
-                    <img
-                      src="./img/contant/products/white-can.png"
-                      srcset="./img/contant/products/white-can@2x.png 2x"
-                      alt="белая банка вкусного кофе"
-                      width="130"
-                      height="188"
-                      class="product__image"
-                    />
-                    <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    <a href="#" class="product__link">
+                      <img
+                        src="./img/contant/products/white-can.png"
+                        srcset="./img/contant/products/white-can@2x.png 2x"
+                        alt="белая банка вкусного кофе"
+                        width="130"
+                        height="188"
+                        class="product__image"
+                      />
+                      <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    </a>
                     <p class="product__description">
                       Кофе без кофеина из Эфиопии с натуральным фермерским
                       молоком
@@ -541,15 +650,17 @@
                     </div>
                   </li>
                   <li class="product__item">
-                    <img
-                      src="./img/contant/products/purple-can.png"
-                      srcset="./img/contant/products/purple-can@2x.png 2x"
-                      alt="фиолетовая банка вкусного кофе"
-                      width="130"
-                      height="188"
-                      class="product__image"
-                    />
-                    <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    <a href="#" class="product__link">
+                      <img
+                        src="./img/contant/products/purple-can.png"
+                        srcset="./img/contant/products/purple-can@2x.png 2x"
+                        alt="фиолетовая банка вкусного кофе"
+                        width="130"
+                        height="188"
+                        class="product__image"
+                      />
+                      <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    </a>
                     <p class="product__description">
                       Кофе без кофеина из Эфиопии с натуральным фермерским
                       молоком
@@ -562,15 +673,17 @@
                     </div>
                   </li>
                   <li class="product__item">
-                    <img
-                      src="./img/contant/products/black-can.png"
-                      srcset="./img/contant/products/black-can@2x.png 2x"
-                      alt="черная банка вкусного кофе"
-                      width="130"
-                      height="188"
-                      class="product__image"
-                    />
-                    <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    <a href="#" class="product__link">
+                      <img
+                        src="./img/contant/products/black-can.png"
+                        srcset="./img/contant/products/black-can@2x.png 2x"
+                        alt="черная банка вкусного кофе"
+                        width="130"
+                        height="188"
+                        class="product__image"
+                      />
+                      <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    </a>
                     <p class="product__description">
                       Кофе без кофеина из Эфиопии с натуральным фермерским
                       молоком
@@ -583,15 +696,17 @@
                     </div>
                   </li>
                   <li class="product__item">
-                    <img
-                      src="./img/contant/products/pink-can.png"
-                      srcset="./img/contant/products/pink-can@2x.png 2x"
-                      alt="розовая банка вкусного кофе"
-                      width="130"
-                      height="188"
-                      class="product__image"
-                    />
-                    <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    <a href="#" class="product__link">
+                      <img
+                        src="./img/contant/products/pink-can.png"
+                        srcset="./img/contant/products/pink-can@2x.png 2x"
+                        alt="розовая банка вкусного кофе"
+                        width="130"
+                        height="188"
+                        class="product__image"
+                      />
+                      <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    </a>
                     <p class="product__description">
                       Кофе без кофеина из Эфиопии с натуральным фермерским
                       молоком
@@ -604,15 +719,17 @@
                     </div>
                   </li>
                   <li class="product__item">
-                    <img
-                      src="./img/contant/products/brown-can.png"
-                      srcset="./img/contant/products/brown-can@2x.png 2x"
-                      alt="коричневая банка вкусного кофе"
-                      width="130"
-                      height="188"
-                      class="product__image"
-                    />
-                    <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    <a href="#" class="product__link">
+                      <img
+                        src="./img/contant/products/brown-can.png"
+                        srcset="./img/contant/products/brown-can@2x.png 2x"
+                        alt="коричневая банка вкусного кофе"
+                        width="130"
+                        height="188"
+                        class="product__image"
+                      />
+                      <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    </a>
                     <p class="product__description">
                       Кофе без кофеина из Эфиопии с натуральным фермерским
                       молоком
@@ -625,15 +742,17 @@
                     </div>
                   </li>
                   <li class="product__item">
-                    <img
-                      src="./img/contant/products/yellow-can.png"
-                      srcset="./img/contant/products/yellow-can@2x.png 2x"
-                      alt="желтая банка вкусного кофе"
-                      width="130"
-                      height="188"
-                      class="product__image"
-                    />
-                    <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    <a href="#" class="product__link">
+                      <img
+                        src="./img/contant/products/yellow-can.png"
+                        srcset="./img/contant/products/yellow-can@2x.png 2x"
+                        alt="желтая банка вкусного кофе"
+                        width="130"
+                        height="188"
+                        class="product__image"
+                      />
+                      <h4 class="product__title">Декаф Флэт Уайт</h4>
+                    </a>
                     <p class="product__description">
                       Кофе без кофеина из Эфиопии с натуральным фермерским
                       молоком
@@ -700,7 +819,7 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Мы на карте</h2>
-        <div class="map__container"></div>
+        <div class="map__container" id="map"></div>
       </section>
     </main>
     <footer class="main-footer">
@@ -871,7 +990,10 @@
         </div>
         <div class="main-footer__copyright copyright">
           <span class="copyright__text">Разработано в</span>
-          <a href="#" class="copyright__link">
+          <a
+            href="https://htmlacademy.ru/intensive/adaptive"
+            class="copyright__link"
+          >
             <span class="copyright__name">HTML Academy</span>
             <svg
               class="copyright__name-icon"
@@ -889,5 +1011,7 @@
       </div>
     </footer>
     <script src="./js/main.js" type="module"></script>
+    <script src="./leaflet/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>

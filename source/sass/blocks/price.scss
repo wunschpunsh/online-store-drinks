@@ -115,6 +115,11 @@
   border-radius: 4px;
   color: $base-black;
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
   &::placeholder {
     color: #bdbdbd;
   }

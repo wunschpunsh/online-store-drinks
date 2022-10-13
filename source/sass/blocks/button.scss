@@ -12,6 +12,7 @@
 .button-primary {
   background-color: $purple;
   color: $base-white;
+
   &:hover,
   &:focus {
     background-color: #9070ec;
@@ -32,6 +33,7 @@
 .button-secondary {
   background-color: $base-white;
   color: $purple;
+
   &:hover,
   &:focus {
     color: $base-white;
