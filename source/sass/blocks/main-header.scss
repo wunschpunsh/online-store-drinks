@@ -5,7 +5,8 @@
 .main-header__nav {
   position: relative;
   display: flex;
-  padding-left: 20px;
+  flex-wrap: wrap;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     padding-right: 20px;
@@ -19,18 +20,35 @@
 .main-header__logo-container {
   display: flex;
   align-items: center;
-  margin-right: auto;
+  align-self: flex-start;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $mobile-width-only) {
+    .nojs & {
+      flex-basis: 50%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+    padding: 0;
     margin: 0;
   }
 
   @media (min-width: $desktop-width) {
-    flex-basis: 25%;
-    margin-right: 162px;
+    flex-basis: 27%;
   }
 }
+.main-header__logo-link {
+  padding: 12px 20px 12px 20px;
 
+  @media (min-width: $tablet-width) {
+    padding: 22px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
 .main-header__logo {
   @media (max-width: $mobile-width-only) {
     &--visible-tablet {
@@ -85,12 +103,26 @@
   }
 }
 
-.main-header__icon-container {
+.main-header__user-container {
   display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
   align-items: center;
+  justify-content: flex-end;
+
+  @media (max-width: $mobile-width-only) {
+    .nojs & {
+      flex-basis: 50%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    flex-grow: 0;
+  }
 }
 
-.main-header__icon-link {
+.main-header__user-link {
   padding: 20px 22px;
   text-decoration: none;
 
@@ -99,22 +131,22 @@
   }
 
   @media (min-width: $desktop-width), (max-width: $mobile-width-only) {
-    &:focus,
-    &:hover .main-header__icon-text {
+    &:focus .main-header__user-text,
+    &:hover .main-header__user-text {
       color: $purple;
     }
 
-    &:focus,
-    &:hover .main-header__icon {
+    &:focus .main-header__user-icon,
+    &:hover .main-header__user-icon {
       fill: $purple;
     }
 
     &:active {
       background-color: #f0ebff;
-      .main-header__icon {
+      .main-header__user {
         fill: $purple;
       }
-      .main-header__icon-text {
+      .main-header__user-text {
         color: $purple;
       }
     }
@@ -135,13 +167,22 @@
 
 .main-header__button {
   position: relative;
+  display: flex;
+  align-self: flex-start;
+  margin-left: auto;
   padding: 30px;
   border: none;
   cursor: pointer;
   background-color: transparent;
 
+  @media (max-width: $mobile-width-only) {
+    .nojs & {
+      display: none;
+    }
+  }
+
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: calc(50% - 6px);
     left: calc(50% - 8px);
@@ -164,7 +205,7 @@
   }
 }
 
-.main-header__icon {
+.main-header__user-icon {
   fill: #333333;
 
   @media (min-width: $desktop-width) {
@@ -172,7 +213,7 @@
   }
 }
 
-.main-header__icon-text {
+.main-header__user-text {
   display: none;
   font-size: 12px;
   line-height: 16px;

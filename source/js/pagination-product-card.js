@@ -2,9 +2,9 @@ const prevButton = document.querySelector('.pagination__link--prev');
 const nextButton = document.querySelector('.pagination__link--next');
 const numberButtons = document.querySelectorAll('.pagination__link--number');
 const paginationList = document.querySelector('.pagination__list');
+
 const MIN_SCREEN_WIDTH = 768;
 
-const pageNumbers = [1, 2, 3];
 const currentScreenWidth = window.screen.width;
 
 let currentPageNumber = 2;
@@ -24,7 +24,7 @@ const hiddenButton = function () {
     currentPageNumber == 1
       ? (prevButton.style.visibility = 'hidden')
       : (prevButton.style.visibility = 'visible');
-    currentPageNumber == pageNumbers.length
+    currentPageNumber == numberButtons.length
       ? (nextButton.style.visibility = 'hidden')
       : (nextButton.style.visibility = 'visible');
   }
@@ -32,7 +32,7 @@ const hiddenButton = function () {
   currentPageNumber == 1
     ? (prevButton.disabled = true)
     : (prevButton.disabled = false);
-  currentPageNumber == pageNumbers.length
+  currentPageNumber == numberButtons.length
     ? (nextButton.disabled = true)
     : (nextButton.disabled = false);
 };
@@ -41,8 +41,8 @@ const changePage = function (page) {
   if (page < 1) {
     page = 1;
   }
-  if (page > pageNumbers.length) {
-    page = pageNumbers.length;
+  if (page > numberButtons.length) {
+    page = numberButtons.length;
   }
   hiddenButton();
   selectedPage();

@@ -72,6 +72,11 @@
   }
 }
 
+.sort__control-list {
+  border-collapse: separate;
+  border-radius: 4px;
+}
+
 .sort__control-item {
   width: 190px;
   padding: 8px 0;
@@ -84,14 +89,25 @@
     border-bottom: 1px solid #f0ebff;
   }
 
-  &:hover {
+  &:hover:not(.sort__control-item--active) {
     background-color: #f0ebff;
-    border-radius: 0px 0px 4px 4px;
+    &:first-child {
+      border-radius: 4px 4px 0px 0px;
+    }
+    &:last-child {
+      border-radius: 0px 0px 4px 4px;
+    }
   }
 
-  &:active {
+  &--active {
     background-color: $purple;
     color: $base-white;
-    border-radius: 4px 4px 0px 0px;
+
+    &:first-child {
+      border-radius: 4px 4px 0px 0px;
+    }
+    &:last-child {
+      border-radius: 0px 0px 4px 4px;
+    }
   }
 }

@@ -1,5 +1,6 @@
 .copyright {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 20px 57px 30px;
 
@@ -23,6 +24,7 @@
 
 .copyright__link {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-decoration: none;

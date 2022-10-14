@@ -1,18 +1,21 @@
 .main-nav__container {
   display: none;
 
-  .nojs & {
-    display: block;
-  }
+  @media (max-width: $mobile-width-only) {
+    .nojs & {
+      display: block;
+      flex-grow: 1;
+    }
 
-  .main-nav--opened & {
-    z-index: 10;
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: $base-white;
+    .main-nav--opened & {
+      z-index: 10;
+      display: block;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: $base-white;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -50,12 +53,10 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    justify-content: start;
   }
 }
 
@@ -75,7 +76,7 @@
     }
   }
 
-  .main-nav--opened & {
+  @media (max-width: $mobile-width-only) {
     border-top: 1px solid #f0ebff;
 
     &:last-child {
