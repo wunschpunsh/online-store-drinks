@@ -57,7 +57,7 @@ const optimizeImage = () => {
     .pipe(gulp.dest("build/img"));
 };
 
-export const optimizeImageLeaflet = () => {
+const optimizeImageLeaflet = () => {
   return gulp
     .src("source/leaflet/**/*.png")
     .pipe(squoosh())
@@ -102,10 +102,16 @@ const createSprite = () => {
 
 const copyFiles = (done) => {
   gulp
-    .src(["source/fonts/*.{woff,woff2}", "source/leaflet/*.{js,html}"], {
+    .src("source/fonts/*.{woff,woff2}", {
       base: "source",
-      sourcemaps: true,
     })
+    .pipe(gulp.dest("build"));
+  done();
+};
+
+const copyFilesLeaflet = (done) => {
+  gulp
+    .src("source/leaflet/*.{js,html}", { base: "source", sourcemaps: true })
     .pipe(gulp.dest("build", { sourcemaps: "." }));
   done();
 };
@@ -150,6 +156,7 @@ const reload = (done) => {
 export const build = gulp.series(
   clean,
   copyFiles,
+  copyFilesLeaflet,
   optimizeImage,
   optimizeImageLeaflet,
   gulp.parallel(
@@ -169,6 +176,7 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copyFiles,
+  copyFilesLeaflet,
   copyImages,
   optimizeImageLeaflet,
   gulp.parallel(
