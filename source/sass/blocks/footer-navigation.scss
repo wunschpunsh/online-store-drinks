@@ -15,6 +15,10 @@
   font-size: 14px;
   line-height: 20px;
   color: $purple;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 12px;
+  }
 }
 
 .footer-navigation__list {
