@@ -145,7 +145,15 @@ export const build = gulp.series(
   copyFiles,
   optimizeImage,
   optimizeImageLeaflet,
-  gulp.parallel(styles, html, scripts, svg, createSprite, createWebp)
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    createSprite,
+    createWebp,
+    stylesLeaflet
+  )
 );
 
 //  Develop

@@ -1,8 +1,8 @@
 const createSlider = () => {
   new Swiper('.swiper ', {
     navigation: {
-      nextEl: '.slide__button--next',
-      prevEl: '.slide__button--prev',
+      nextEl: '.promo__swiper-button--next',
+      prevEl: '.promo__swiper-button--prev',
     },
     pagination: {
       el: '.slider-pagination__list',
