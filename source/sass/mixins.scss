@@ -9,21 +9,21 @@
   @media (max-width: $mobile-width-only) {
     &:hover,
     &:focus {
-      background-image: url('../../img/arrow-pagination-left-white.svg');
+      background-image: url("../../img/arrow-pagination-left-white.svg");
       background-repeat: no-repeat;
       background-size: auto;
       background-position: center;
     }
 
     &:active {
-      background-image: url('../../img/arrow-pagination-left-white.svg');
+      background-image: url("../../img/arrow-pagination-left-white.svg");
       background-repeat: no-repeat;
       background-size: auto;
       background-position: center;
     }
 
     &:disabled {
-      background-image: url('../../img/arrow-pagination-left-white.svg');
+      background-image: url("../../img/arrow-pagination-left-white.svg");
       background-repeat: no-repeat;
       background-size: auto;
       background-position: center;
@@ -35,21 +35,21 @@
   @media (max-width: $mobile-width-only) {
     &:hover,
     &:focus {
-      background-image: url('../../img/arrow-pagination-right-white.svg');
+      background-image: url("../../img/arrow-pagination-right-white.svg");
       background-repeat: no-repeat;
       background-size: auto;
       background-position: center;
     }
 
     &:active {
-      background-image: url('../../img/arrow-pagination-right-white.svg');
+      background-image: url("../../img/arrow-pagination-right-white.svg");
       background-repeat: no-repeat;
       background-size: auto;
       background-position: center;
     }
 
     &:disabled {
-      background-image: url('../../img/arrow-pagination-right-white.svg');
+      background-image: url("../../img/arrow-pagination-right-white.svg");
       background-repeat: no-repeat;
       background-size: auto;
       background-position: center;

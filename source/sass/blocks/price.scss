@@ -1,13 +1,12 @@
 .price__container {
   @media (min-width: $tablet-width) {
     flex-basis: 30%;
-    // margin-right: 21px;
   }
 }
 
 .price__title {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -28,6 +27,10 @@
     min-width: 220px;
     margin-left: 7px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .price__range-bar {
@@ -40,10 +43,9 @@
 }
 
 .price__range-button {
-  position: relative;
   z-index: 10;
   position: absolute;
-  top: calc(50% - 12px);
+  top: calc(50% - 11px);
   width: 24px;
   height: 24px;
   padding: 0;
@@ -51,9 +53,10 @@
   cursor: pointer;
   border: 2px solid $purple;
   background-color: $base-white;
+
   &:hover:enabled.price__range-button--min::after,
   &:hover:enabled.price__range-button--max::after {
-    content: '';
+    content: "";
     position: absolute;
     top: calc(50% - 8px);
     left: calc(50% - 8px);
@@ -65,7 +68,7 @@
 
   &:active:enabled.price__range-button--min::after,
   &:active:enabled.price__range-button--max::after {
-    content: '';
+    content: "";
     position: absolute;
     top: calc(50% - 8px);
     left: calc(50% - 8px);
@@ -88,24 +91,48 @@
   }
 
   &--max {
-    right: calc(10% - 12px); // 10%  это (100% - width price__range-bar)
+    right: calc(10% - 9px); // 10%  это (100% - width price__range-bar)
+
+    @media (min-width: $tablet-width) {
+      right: calc(10% - 3px);
+    }
+
+    @media (min-width: $desktop-width) {
+      right: calc(10% - 10px);
+    }
   }
 }
 
 .price__input-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    right: calc(50% - 5px);
+    width: 10px;
+    height: 2px;
+    background-color: #bdbdbd;
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-bottom: 30px;
   }
 }
 
 .price__input {
   width: 34%;
-  padding: 7px 9px;
-  font-family: 'Montserrat';
+  padding: 5px 9px;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -138,5 +165,9 @@
 
   @media (min-width: $tablet-width) {
     padding: 6px 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 6px 11px;
   }
 }

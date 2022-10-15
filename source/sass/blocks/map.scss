@@ -1,29 +1,33 @@
 .map__container {
   max-width: 100%;
   min-height: 420px;
-  background-image: url("../../img/contant/maps/map-small.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/contant/maps/map-small@2x.png");
-  }
-
-  @media (min-width: $tablet-width) {
-    min-height: 480px;
-    background-image: url("../../img/contant/maps/map-medium.png");
+  &.nojs {
+    background-color: #4e610a;
+    background-image: url("../../img/contant/maps/map-small.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/contant/maps/map-medium@2x.png");
+      background-image: url("../../img/contant/maps/map-small@2x.webp");
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    min-height: 540px;
-    background-image: url("../../img/contant/maps/map-large.png");
+    @media (min-width: $tablet-width) {
+      min-height: 480px;
+      background-image: url("../../img/contant/maps/map-medium.webp");
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/contant/maps/map-large@2x.png");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/contant/maps/map-medium@2x.webp");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 540px;
+      background-image: url("../../img/contant/maps/map-large.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/contant/maps/map-large@2x.webp");
+      }
     }
   }
 }

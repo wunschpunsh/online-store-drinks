@@ -1,5 +1,5 @@
 .button {
-  font-family: 'Montserrat';
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -39,6 +39,7 @@
     color: $base-white;
     background-color: #9070ec;
   }
+
   &:active {
     color: $base-white;
     background-color: #593cac;

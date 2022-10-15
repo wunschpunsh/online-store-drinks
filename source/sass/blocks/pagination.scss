@@ -14,8 +14,6 @@
 
 .pagination__list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -38,7 +36,6 @@
 
 .pagination__link {
   box-sizing: border-box;
-  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,20 +56,10 @@
     font-weight: 600;
     background-color: transparent;
     color: $base-black;
-
-    // @media (min-width: $tablet-width) {
-    //   .pagination__item:nth-child(3) & {
-    //     margin: 0 20px;
-    //   }
-    //   .pagination__item:nth-child(2) & {
-    //     margin: 0;
-    //     margin-right: 20px;
-    //   }
-    // }
   }
 
   &--prev {
-    background-image: url('../../img/arrow-pagination-left.svg');
+    background-image: url("../../img/arrow-pagination-left.svg");
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
@@ -86,7 +73,7 @@
   }
 
   &--next {
-    background-image: url('../../img/arrow-pagination-right.svg');
+    background-image: url("../../img/arrow-pagination-right.svg");
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
@@ -95,15 +82,16 @@
       background-image: none;
       border-radius: 0 4px 4px 0;
     }
+
     @include style-pagination-arrow-right;
   }
 }
 
 .pagination__link-text {
-  font-family: 'Montserrat';
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   display: none;
 

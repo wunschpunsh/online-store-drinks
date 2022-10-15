@@ -6,16 +6,18 @@
   }
 
   &--open .sort__control-current {
-    background-image: url('../../img/arrow-select-active.svg');
+    background-image: url("../../img/arrow-select-active.svg");
     background-repeat: no-repeat;
     background-position: right 10px center;
   }
 }
 
 .sort__subtitle {
+  margin-left: 2px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+
   @media (min-width: $tablet-width) {
     margin-right: 10px;
   }
@@ -32,6 +34,7 @@
     margin-bottom: 26px;
   }
 }
+
 .sort__control-list {
   z-index: 1;
   display: none;
@@ -41,25 +44,32 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  border-collapse: separate;
+  border-radius: 4px;
   background-color: $base-white;
 }
+
 .sort__control-current {
   box-sizing: border-box;
   width: 165px;
   height: 32px;
-  padding: 4px 30px 4px 10px;
-  font-family: 'Montserrat';
+  padding: 4px 27px 4px 13px;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  background-image: url('../../img/arrow-select.svg');
+  background-image: url("../../img/arrow-select.svg");
   background-repeat: no-repeat;
-  background-position: right 10px center;
+  background-position: right 8px center;
   appearance: none;
   border: none;
   color: $purple;
   background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    padding: 4px 27px 4px 10px;
+  }
 
   &:focus-visible {
     outline: none;
@@ -70,11 +80,6 @@
     background-color: #f0ebff;
     border-radius: 4px;
   }
-}
-
-.sort__control-list {
-  border-collapse: separate;
-  border-radius: 4px;
 }
 
 .sort__control-item {
@@ -91,11 +96,13 @@
 
   &:hover:not(.sort__control-item--active) {
     background-color: #f0ebff;
+
     &:first-child {
-      border-radius: 4px 4px 0px 0px;
+      border-radius: 4px 4px 0 0;
     }
+
     &:last-child {
-      border-radius: 0px 0px 4px 4px;
+      border-radius: 0 0 4px 4px;
     }
   }
 
@@ -104,10 +111,11 @@
     color: $base-white;
 
     &:first-child {
-      border-radius: 4px 4px 0px 0px;
+      border-radius: 4px 4px 0 0;
     }
+
     &:last-child {
-      border-radius: 0px 0px 4px 4px;
+      border-radius: 0 0 4px 4px;
     }
   }
 }

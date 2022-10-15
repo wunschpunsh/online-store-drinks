@@ -68,10 +68,10 @@
 .catalog__filter-container {
   @media (min-width: $tablet-width) {
     display: flex;
-    flex-grow: 1;
+    flex-basis: 93%;
     justify-content: center;
     align-items: center;
-    margin-bottom: 52px;
+    margin-bottom: 40px;
   }
 }
 
@@ -95,7 +95,7 @@
 .catalog__filter-reset {
   display: block;
   margin: 0 auto;
-  margin-bottom: 36px;
+  margin-bottom: 39px;
   padding: 10px 17px;
   font-size: 14px;
   line-height: 25px;

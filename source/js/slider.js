@@ -1,11 +1,11 @@
 const createSlider = () => {
-  new Swiper('.swiper ', {
+  new Swiper(".swiper ", {
     navigation: {
-      nextEl: '.promo__swiper-button--next',
-      prevEl: '.promo__swiper-button--prev',
+      nextEl: ".promo__swiper-button--next",
+      prevEl: ".promo__swiper-button--prev",
     },
     pagination: {
-      el: '.slider-pagination__list',
+      el: ".slider-pagination__list",
       clickable: true,
     },
   });

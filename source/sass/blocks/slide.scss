@@ -1,6 +1,6 @@
 .slide__container {
   position: relative;
-  padding: 20px 0 60px;
+  padding: 18px 0 60px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -8,10 +8,12 @@
     padding: 0;
     padding-top: 60px;
   }
+
   @media (min-width: $desktop-width) {
     flex-direction: row;
     padding: 0;
   }
+
   @include container;
 }
 
@@ -23,6 +25,7 @@
     order: 1;
     margin: 0;
   }
+
   @media (min-width: $desktop-width) {
     width: 50%;
     order: 0;
@@ -87,11 +90,13 @@
     font-size: 56px;
     line-height: 80px;
   }
+
   @media (min-width: $desktop-width) {
     padding: 0;
     text-align: left;
   }
 }
+
 .slide__description {
   margin: 0;
   margin-bottom: 20px;
@@ -102,7 +107,7 @@
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
-    width: 83%;
+    width: 79%;
     margin: 0 auto;
     margin-bottom: 20px;
     font-size: 20px;
@@ -110,6 +115,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 91%;
     padding: 0;
     margin: 0;
     margin-bottom: 40px;
@@ -143,6 +149,7 @@
   word-break: break-word;
   color: $purple;
 }
+
 .slide__price-after {
   margin-right: 20px;
   font-weight: 600;

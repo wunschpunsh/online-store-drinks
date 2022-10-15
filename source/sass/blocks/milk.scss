@@ -1,7 +1,6 @@
 .milk__container {
   @media (min-width: $tablet-width) {
-    flex-basis: 29%;
-    // margin-right: 38px;
+    flex-basis: 31%;
   }
 }
 
@@ -20,7 +19,11 @@
 }
 
 .milk__item {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 23px;
+  }
 }
 
 .milk__field {
@@ -79,6 +82,7 @@
   & ~ .milk__marker {
     border: 2px solid #e2e2e2;
   }
+
   & ~ .milk__description {
     color: #bdbdbd;
   }

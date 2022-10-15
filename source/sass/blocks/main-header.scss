@@ -38,8 +38,9 @@
     flex-basis: 27%;
   }
 }
+
 .main-header__logo-link {
-  padding: 12px 20px 12px 20px;
+  padding: 11px 20px;
 
   @media (min-width: $tablet-width) {
     padding: 22px 20px;
@@ -49,6 +50,7 @@
     padding: 0;
   }
 }
+
 .main-header__logo {
   @media (max-width: $mobile-width-only) {
     &--visible-tablet {
@@ -118,7 +120,7 @@
 
   @media (min-width: $tablet-width) {
     order: 3;
-    flex-grow: 0;
+    flex-basis: 15%;
   }
 }
 
@@ -143,9 +145,11 @@
 
     &:active {
       background-color: #f0ebff;
+
       .main-header__user {
         fill: $purple;
       }
+
       .main-header__user-text {
         color: $purple;
       }
@@ -182,7 +186,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: calc(50% - 6px);
     left: calc(50% - 8px);
