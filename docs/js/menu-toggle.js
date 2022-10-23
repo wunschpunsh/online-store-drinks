@@ -1,0 +1,1 @@
+const menuButton=document.querySelector(".main-header__button"),naviBar=document.querySelector(".main-header__nav"),toggleMenu=()=>{menuButton.addEventListener("click",(()=>{naviBar.classList.toggle("main-nav--opened")}))};export{toggleMenu};
